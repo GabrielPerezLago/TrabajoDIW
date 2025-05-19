@@ -187,6 +187,7 @@ main .contenedor-cards .cards .card a:hover{
 main .contenedor-horarios {
     grid-area: main-horarios;
     text-align: center;
+    margin: 50px 0;
 }
 
 main .contenedor-horarios h2 {
@@ -195,6 +196,12 @@ main .contenedor-horarios h2 {
     margin: 10px;
 }
 
+main .contenedor-horarios table, th, td{
+    border: 2px solid var(--border-color);
+    border-collapse: collapse;
+    margin: 0 50px;
+} 
+
 main aside {
     grid-area: aside;
     width: 100%;
@@ -202,6 +209,7 @@ main aside {
     background-color: var(--background-aside);
     border-radius: 20px;
 }
+
 
 footer {
     grid-area: footer;
