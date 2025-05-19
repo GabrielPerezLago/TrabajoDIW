@@ -1,17 +1,25 @@
 :root{   
     --primary-color: #1e90ff;
-    --secondary-color: #f5f5f5;
+    --secondary-color: #fffdfd;
     --text-color: #333333;
     --hover-primary-color: #104e8b;
     --hover-secondary-color: #1e90ff;
     --primary-color-2: #011f67;
     --nav-background: rgba(0,0,0 , 0.5);
+    --background-aside: rgba(146, 138, 138, 0.086);
+    --border-color: rgb(171, 164, 164);
+
+    --titulos-font: 'Mea Culpa', cursive;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+*::selection {
+   color: var(--primary-color);
 }
 
 body {
@@ -21,12 +29,10 @@ body {
     line-height: 1.5;
     display: grid;
     grid-template-areas: 
-    "header header"
-    "main-cabecera main-cabecera"
-    "main-body aside"
-    "footer footer";
+    "header "
+    "main"
+    "footer";
 }
-
 
 header{
     grid-area: header;
@@ -66,6 +72,8 @@ header nav .links-navegacion .nav-item:hover{
 header h1 {
     font-size: 20rem;
     font-family: 'Tinos', serif;
+    color: var(--primary-color-2);
+    opacity: 90%;
 }
 
 header .cabecera {
@@ -73,22 +81,33 @@ header .cabecera {
     color: var(--secondary-color);
 }
 
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "main-cabecera main-cabecera"
+    "main-cards aside"
+    "main-horarios aside";
+}
+
 main .contenedor-info {
     grid-area: main-cabecera;
-    font-family: 'Mea Culpa', cursive;
+    font-family: var(--titulos-font);
     text-align: center;
-    margin: 100px;
-    min-height: 200px;
+    margin: 150px 50px 50px 50px;
+    min-height: 450px;
 }
 
 main .contenedor-info h2 {
     color: var(--primary-color-2);
-    font-size: 2.5rem;
-    margin: 20px;
+    font-size: 3rem;
+    margin: 40px 0;
 }
 
 main .contenedor-info .texto-info {
-    margin-bottom: 20px;
+    margin: 40px 40px;
+    padding: 20px 20px;
+    font-size: 1.2rem;
 }
 
 main .contenedor-info .boton-info{
@@ -96,21 +115,92 @@ main .contenedor-info .boton-info{
     margin: 10px;
     text-decoration: none;
     color: var(--primary-color-2);
-    transition: transform 0.5s ease;
+    transition: transform 0.2s ease;
 }
 
 main .contenedor-info .boton-info:hover{
     transform: scale(1.1);
-    color: var(--hover-primary-color);
 }
 
 main img {
-    width: 200px;
+    width: 180px;
+    margin: 20px;
     
 }
 
-aside {
+main .contenedor-cards{
+    grid-area: main-cards;
+    text-align: center;
+    margin: 30px 10px;
+    max-width: 100%;
+}
+
+main .contenedor-cards h2 {
+    width: 100%;
+    margin: 10px 0 60px 0;
+    font-size: 2rem;
+    color: var(--primary-color-2);
+    font-family: 'Mea Culpa' , cursive;
+}
+
+main .contenedor-cards .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main .contenedor-cards .cards .card {
+    margin:20px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    max-width: 50%;
+    transition: transform 0.25s ease, box-shadow 0.5s ease;
+}
+
+main .contenedor-cards .cards .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .contenedor-cards .cards .card h3 {
+    margin: 10px;
+    color: var(--primary-color-2);
+    font-size: 1.5rem;
+    font-family: var(--titulos-font);
+
+}
+
+main .contenedor-cards .cards .card p{
+    margin: 10px;
+}
+
+main .contenedor-cards .cards .card a{
+    color: var(--primary-color-2);
+    text-decoration: none;
+}
+
+main .contenedor-cards .cards .card a:hover{
+    color:var(--hover-secondary-color)
+}
+
+main .contenedor-horarios {
+    grid-area: main-horarios;
+    text-align: center;
+}
+
+main .contenedor-horarios h2 {
+    color: var(--primary-color-2);
+    font-family: var(--titulos-font);
+    margin: 10px;
+}
+
+main aside {
     grid-area: aside;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-aside);
+    border-radius: 20px;
 }
 
 footer {
