@@ -2,13 +2,15 @@
     --primary-color: #1e90ff;
     --secondary-color: #fffdfd;
     --text-color: #333333;
-    --hover-primary-color: #104e8b;
+    --hover-primary-color: #011f67;
     --hover-secondary-color: #1e90ff;
     --primary-color-2: #011f67;
     --nav-background: rgba(0,0,0 , 0.5);
     --background-aside: rgba(146, 138, 138, 0.086);
     --border-color: rgb(171, 164, 164);
-
+    --border-secondary-color: #012067a0;
+    
+    --titulo-principal-font: 'Tinos', serif;
     --titulos-font: 'Mea Culpa', cursive;
 }
 
@@ -71,7 +73,7 @@ header nav .links-navegacion .nav-item:hover{
 
 header h1 {
     font-size: 20rem;
-    font-family: 'Tinos', serif;
+    font-family: var(--titulo-principal-font);
     color: var(--primary-color-2);
     opacity: 90%;
 }
@@ -85,9 +87,9 @@ main{
     grid-area: main;
     display: grid;
     grid-template-areas:
-    "main-cabecera main-cabecera"
-    "main-cards aside"
-    "main-horarios aside";
+    "main-cabecera main-cabecera main-cabecera"
+    "main-cards main-cards aside"
+    "main-horarios main-horarios aside";
 }
 
 main .contenedor-info {
@@ -155,11 +157,12 @@ main .contenedor-cards .cards .card {
     border: 1px solid var(--border-color);
     border-radius: 15px;
     max-width: 50%;
-    transition: transform 0.25s ease, box-shadow 0.5s ease;
+    transition: transform 0.7s ease, box-shadow 0.2s ease;
 }
 
 main .contenedor-cards .cards .card:hover {
     transform: scale(1.05);
+    transform: translateY(-10%);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -197,21 +200,81 @@ main .contenedor-horarios h2 {
 }
 
 main .contenedor-horarios table, th, td{
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--border-secondary-color);
     border-collapse: collapse;
     margin: 0 50px;
 } 
 
 main aside {
     grid-area: aside;
-    width: 100%;
+    width: 90%;
     height: 100%;
+    float: right;
     background-color: var(--background-aside);
     border-radius: 20px;
+    text-align: center;
+    
 }
 
+main aside ul{
+    list-style: none;
+    text-align: left;
+    padding: 10px;
+}
+
+main aside h4 {
+    color: var(--primary-color-2);
+    font-family: var(--titulos-font);
+    margin: 20px 10px;
+}
+
+main aside ul h5 {
+    color: var(--primary-color-2);
+    font-size: 0.9rem;
+}
+
+main aside ul li a {
+    display: block;
+    color: var(--primary-color-2);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 2px;
+    transition: transform 0.2s ease;
+}
+
+main aside ul li a:hover {
+    transform: scale(1.02)
+}
 
 footer {
     grid-area: footer;
+    margin-top: 10px ;
+    background-color: var(--primary-color-2);
+    text-align: center;
+    color: var(--secondary-color);
 }
 
+footer .contenedor-iconos {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+    color: var(--secondary-color);
+}
+
+footer .contenedor-iconos i {
+    margin: 30px 0;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+footer .contenedor-iconos i:hover {
+    transform: scale(1.05);
+    transform: translateY(-10%);
+}
+
+footer .contenedor-copy p {
+    padding: 10px;
+
+}
