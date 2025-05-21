@@ -383,19 +383,14 @@ footer .contenedor-copy p {
     main .contenedor-info .boton-info {
         font-size: 1rem;
     }
-
+    
     main select {
         width: 100%;
-    }
-
-    main .contenedor-horarios table{
-        
     }
 
     main aside {
         display: none;
     }
-
 
     footer .contenedor-iconos i{
         font-size: 2rem;
