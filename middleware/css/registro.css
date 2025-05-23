@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #1e90ff;
+    --primary-color-2: #011f67;
+    --secondary-color: #fffdfd;
+    --contrast-color:black;
+    --hover-primary-color: #011f67;
+    --hover-secondary-color: #1e90ff;
+    --nav-background: rgba(0, 0, 0, 0.5);
+    --nav--secondary--background: rgb(0, 0, 0);
+    --background-aside: rgba(146, 138, 138, 0.086);
+    --border-color: rgb(171, 164, 164);
+    --border-secondary-color: #012067a0;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --titulo-principal-font: 'Tinos', serif;
+    --titulos-font: 'Mea Culpa', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: var(--primary-color);
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+
+header nav {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 60px;
+    background-color: var(--contrast-color);
+}
+
+header nav img {
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+}
+
+
+header nav .links-navegacion a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: var(--primary-color-2);
+    font-size: 1.5rem;
+    transition: transform 0.5s ease;
+}
+
+header nav .links-navegacion a:hover {
+    transform: scale(1.05);
+    color: var(--hover-secondary-color);
+}
+
+header h1 {
+    margin-top: 5%;
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: var(--titulo-principal-font);
+    font-size: 7rem;
+}
+
+

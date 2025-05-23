@@ -1,14 +1,16 @@
-:root{   
+:root {
     --primary-color: #1e90ff;
     --primary-color-2: #011f67;
     --secondary-color: #fffdfd;
+    --contrast-color:black;
     --hover-primary-color: #011f67;
     --hover-secondary-color: #1e90ff;
-    --nav-background: rgba(0,0,0 , 0.5);
+    --nav-background: rgba(0, 0, 0, 0.5);
+    --nav--secondary--background: rgb(0, 0, 0);
     --background-aside: rgba(146, 138, 138, 0.086);
     --border-color: rgb(171, 164, 164);
     --border-secondary-color: #012067a0;
-
+    --shadow-color: rgba(0, 0, 0, 0.3);
     --titulo-principal-font: 'Tinos', serif;
     --titulos-font: 'Mea Culpa', cursive;
 }
@@ -35,62 +37,49 @@ body {
     "footer";
 }
 
-header{
-    grid-area: header;
-    background-image: url(../img/taller.jpg);
+header {
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-    min-height: 700px;
+    background-image: url(../img/taller.jpg);
+    min-height: 800px;
 }
 
-header nav{
+header nav {
     display: flex;
+    background-color: transparent;
     justify-content: space-between;
-    background-color: var(--nav-background);
+    padding: 30px;
 }
 
 header nav img {
     border-radius: 50px;
-    margin: 12px;
+    width: 80px;
+    height: 80px;
 }
 
-header nav .links-navegacion {
-    margin: 20px;
-}
-
-header nav .links-navegacion .nav-item{
+header nav .links-navegacion a {
     display: inline-block;
-    padding: 10px;
+    margin: 5px;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--contrast-color);
+    font-size: 1.5rem;
     transition: transform 0.5s ease;
 }
 
-header nav .links-navegacion .nav-item:hover{
-    color: var(--hover-secondary-color);
+header nav .links-navegacion a:hover {
     transform: scale(1.05);
+    color: var(--hover-secondary-color);
 }
 
-header{
-    nav{
-        input {
-            display: none;
-        }
-        .menu-hamburguesa{
-            display: none;
-            color: var(--secondary-color);
-            cursor: pointer;
-        }
-    }
-}
-
-header h1 {
-    font-size: 20rem;
+header .cabecera h1 {
+    color: var(--secondary-color);
+    text-align: center;
     font-family: var(--titulo-principal-font);
-    color: var(--primary-color-2);
-    opacity: 90%;
+    font-size: 20rem;
 }
 
-header .cabecera {
+header .cabecera h2{
     text-align: center;
     color: var(--secondary-color);
 }
@@ -103,6 +92,11 @@ main{
     "main-cards main-cards aside"
     "main-horarios main-horarios aside";
 }
+
+/* main section {
+    box-shadow: 5px 5px 10px var(--shadow-color);
+    border-radius: 20px;
+} */
 
 main .contenedor-info {
     grid-area: main-cabecera;
@@ -262,38 +256,6 @@ main aside ul li a:hover::before{
     content: "> ";
 }
 
-footer {
-    grid-area: footer;
-    margin-top: 10px ;
-    background-color: var(--primary-color-2);
-    text-align: center;
-    color: var(--secondary-color);
-}
-
-footer .contenedor-iconos {
-    display: flex;
-    justify-content: space-around;
-    margin: 10px;
-    padding: 10px;
-    color: var(--secondary-color);
-}
-
-footer .contenedor-iconos i {
-    margin: 30px 0;
-    color: var(--secondary-color);
-    font-size: 2rem;
-    transition: transform 0.3s ease;
-}
-
-footer .contenedor-iconos i:hover {
-    transform: scale(1.05);
-    transform: translateY(-10%);
-}
-
-footer .contenedor-copy p {
-    padding: 10px;
-
-}
 
 @media screen and (max-width: 800px) {
 
@@ -324,7 +286,7 @@ footer .contenedor-copy p {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
 
     body{
         line-height: auto;
