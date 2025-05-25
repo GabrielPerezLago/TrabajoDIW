@@ -15,25 +15,38 @@
             <div class="nav-imagen">
                 <img src="./img/logo.jpg" alt="Logo" width="50px" height="50px">
             </div>
-            <div class="liks-navegacion">
+            <div class="links-navegacion">
                 <a href="./index.html">Inicio</a>
                 <a href="./sobreNosotros.html">Sobre Nosotros</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="./contacto.html">Contacto</a>
             </div>
         </nav>
-        <h1>Contáctanos</h1>
     </header>
     <main>
        <section class="formulario-login">
-            <h2>Iniciar Sesión</h2>
+            <h2>Registrarse</h2>
             <form>
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre de Usuario" class="input-text" required>
                 
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su Contraseña" class="input-text" required/>
                 
-                <button type="submit">Iniciar Sesión</button>
+                <label for="email">Correo Electronico</label>
+                <input type="email" name="email" id="email" class="input-text" placeholder="Ingresse Correo Electronico">
+
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="input">
+
+                <label for="sexo">Sexo</label>
+                <select name="sexo" id="sexo">
+                    <option value="none"> - </option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="nsnc">Prefiero no decirlo</option>
+                </select>
+
+                <input type="button" id="submit" value="Enviar">
             </form>
         </section>
     </main>

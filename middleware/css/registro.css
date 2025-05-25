@@ -2,7 +2,8 @@
     --primary-color: #1e90ff;
     --primary-color-2: #011f67;
     --secondary-color: #fffdfd;
-    --contrast-color:black;
+    --contrast-color: black;
+    --contrast-secondary-color: rgba(128, 128, 128, 0.566);
     --hover-primary-color: #011f67;
     --hover-secondary-color: #1e90ff;
     --nav-background: rgba(0, 0, 0, 0.5);
@@ -10,9 +11,9 @@
     --background-aside: rgba(146, 138, 138, 0.086);
     --border-color: rgb(171, 164, 164);
     --border-secondary-color: #012067a0;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --titulo-principal-font: 'Tinos', serif;
-    --titulos-font: 'Mea Culpa', cursive;
+    --shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    --titulo-principal-font: 'Playfair Displa', serif;
+    --text-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -27,6 +28,7 @@
 
 body {
     background-color: var(--secondary-color);
+    font-family: var(--text-font);
 }
 
 
@@ -34,14 +36,15 @@ header nav {
     display: flex;
     background-color: transparent;
     justify-content: space-between;
-    padding: 60px;
-    background-color: var(--contrast-color);
+    align-items: center;
+    padding: 20px;
+    background-color: var(--contrast-secondary-color);
 }
 
 header nav img {
     border-radius: 50px;
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
 }
 
 
@@ -50,7 +53,7 @@ header nav .links-navegacion a {
     margin: 10px;
     text-decoration: none;
     color: var(--primary-color-2);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     transition: transform 0.5s ease;
 }
 
@@ -59,12 +62,66 @@ header nav .links-navegacion a:hover {
     color: var(--hover-secondary-color);
 }
 
-header h1 {
-    margin-top: 5%;
-    color: var(--secondary-color);
-    text-align: center;
-    font-family: var(--titulo-principal-font);
-    font-size: 7rem;
+main section {
+    width: 50%;
+    margin: 60px auto;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
 }
 
+main section h2 {
+    margin: 40px 10px;
+    text-align: center;
+    color: var(--primary-color-2);
+    font-size: 2rem;
+    font-family: var(--titulo-principal-font);
+}
 
+main section form {
+    text-align: center;
+    margin: 15px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    select {
+        text-align: center;
+    }
+}
+
+main section form label {
+    color: var(--primary-color-2);
+    font-size: 1.15rem;
+}
+
+main section form input, select {
+    width: 70%;
+    height: 2rem;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+main section form input:hover,
+select:hover {
+    box-shadow: var(--shadow);
+}
+
+main section form select {
+    width: 50%;
+}
+
+main section form input#submit {
+    width: 20%;
+    border-radius: 30px;
+    margin: 30px auto;
+    background-color: var(--primary-color-2);
+    color: var(--secondary-color);
+    transition: transform 0.2s ease;
+}
+
+main section form input#submit:hover{
+    transform: scale(1.1);
+}
