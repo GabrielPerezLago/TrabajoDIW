@@ -2,27 +2,37 @@
     --primary-color: #1e90ff;
     --primary-color-2: #011f67;
     --secondary-color: #fffdfd;
-    --contrast-color:black;
+    --contrast-color: black;
+    --contrast-secondary-color: rgba(128, 128, 128, 0.566);
     --hover-primary-color: #011f67;
     --hover-secondary-color: #1e90ff;
+    --hover-table-color: rgba(128, 128, 128, 0.12);
     --nav-background: rgba(0, 0, 0, 0.5);
     --nav--secondary--background: rgb(0, 0, 0);
     --background-aside: rgba(146, 138, 138, 0.086);
     --border-color: rgb(171, 164, 164);
     --border-secondary-color: #012067a0;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --titulo-principal-font: 'Tinos', serif;
-    --titulos-font: 'Mea Culpa', cursive;
+    --shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    --titulo-principal-font: 'Playfair Displa', serif;
+    --text-font: 'Roboto', sans-serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 *::selection {
-   color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+* h1, h2, h3 {
+    font-family: var(--titulo-principal-font);
+}
+
+* p , a{
+    font-family: var(--text-font);
 }
 
 body {
@@ -30,11 +40,6 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.5;
-    display: grid;
-    grid-template-areas: 
-    "header "
-    "main"
-    "footer";
 }
 
 header {
@@ -79,18 +84,18 @@ header .cabecera h1 {
     font-size: 20rem;
 }
 
-header .cabecera h2{
+header .cabecera h2 {
     text-align: center;
     color: var(--secondary-color);
 }
 
-main{
+main {
     grid-area: main;
     display: grid;
     grid-template-areas:
-    "main-cabecera main-cabecera main-cabecera"
-    "main-cards main-cards aside"
-    "main-horarios main-horarios aside";
+        "main-cabecera main-cabecera main-cabecera"
+        "main-cards main-cards aside"
+        "main-horarios main-horarios main-horarios";
 }
 
 /* main section {
@@ -118,7 +123,7 @@ main .contenedor-info .texto-info {
     font-size: 1.2rem;
 }
 
-main .contenedor-info .boton-info{
+main .contenedor-info .boton-info {
     display: inline-block;
     margin: 10px;
     text-decoration: none;
@@ -126,17 +131,17 @@ main .contenedor-info .boton-info{
     transition: transform 0.2s ease;
 }
 
-main .contenedor-info .boton-info:hover{
+main .contenedor-info .boton-info:hover {
     transform: scale(1.1);
 }
 
 main img {
     width: 180px;
     margin: 20px;
-    
+
 }
 
-main .contenedor-cards{
+main .contenedor-cards {
     grid-area: main-cards;
     text-align: center;
     margin: 30px 10px;
@@ -148,7 +153,7 @@ main .contenedor-cards h2 {
     margin: 10px 0 60px 0;
     font-size: 2rem;
     color: var(--primary-color-2);
-    font-family: 'Mea Culpa' , cursive;
+    font-family: 'Mea Culpa', cursive;
 }
 
 main .contenedor-cards .cards {
@@ -159,7 +164,7 @@ main .contenedor-cards .cards {
 }
 
 main .contenedor-cards .cards .card {
-    margin:20px;
+    margin: 20px;
     border: 1px solid var(--border-color);
     border-radius: 15px;
     max-width: 50%;
@@ -180,36 +185,63 @@ main .contenedor-cards .cards .card h3 {
 
 }
 
-main .contenedor-cards .cards .card p{
+main .contenedor-cards .cards .card p {
     margin: 10px;
 }
 
-main .contenedor-cards .cards .card a{
+main .contenedor-cards .cards .card a {
     color: var(--primary-color-2);
     text-decoration: none;
 }
 
-main .contenedor-cards .cards .card a:hover{
-    color:var(--hover-secondary-color)
+main .contenedor-cards .cards .card a:hover {
+    color: var(--hover-secondary-color)
 }
 
 main .contenedor-horarios {
     grid-area: main-horarios;
     text-align: center;
-    margin: 50px 0;
+    margin: 50px auto;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border-radius: 30px;
 }
 
 main .contenedor-horarios h2 {
+    font-size: 2rem;
+    font-family: var(--titulo-principal-font);
     color: var(--primary-color-2);
     font-family: var(--titulos-font);
     margin: 10px;
 }
 
-main .contenedor-horarios table, th, td{
-    border: 2px solid var(--border-secondary-color);
+
+main .contenedor-horarios table {
+    margin: 50px 0;
+    width: 100%;
+    height: 150px;
     border-collapse: collapse;
-    margin: 0 50px;
-} 
+    font-size: 1rem;
+    border-radius: 40px;
+}
+
+main .contenedor-horarios table th,
+td {
+    border: 0.5px solid var(--border-secondary-color);
+    padding: 12px 15px;
+}
+
+main .contenedor-horarios table th {
+    font-weight: 600;
+}
+
+main .contenedor-horarios table td:hover {
+    background-color: var(--hover-table-color);
+}
+
+main .contenedor-horarios table#vertical {
+    display: none;
+}
 
 main aside {
     grid-area: aside;
@@ -219,10 +251,10 @@ main aside {
     background-color: var(--background-aside);
     border-radius: 20px;
     text-align: center;
-    
+
 }
 
-main aside ul{
+main aside ul {
     list-style: none;
     text-align: left;
     padding: 10px;
@@ -252,17 +284,17 @@ main aside ul li a:hover {
     transform: scale(1.02);
 }
 
-main aside ul li a:hover::before{
+main aside ul li a:hover::before {
     content: "> ";
 }
 
 
 @media screen and (max-width: 800px) {
 
-    header{
+    header {
         max-height: 600px;
     }
-    
+
     header nav {
         display: flex;
         flex-direction: column;
@@ -288,54 +320,46 @@ main aside ul li a:hover::before{
 
 @media (max-width: 450px) {
 
-    body{
+    body {
         line-height: auto;
     }
 
     header {
         height: 100px;
     }
-    
-    header h1 {
-        font-size: 9rem;
+
+    header .cabecera h1 {
+        font-size: 7rem;
     }
 
     header .cabecera h2 {
         font-size: 1rem;
     }
 
-    header nav {
-        flex-direction: row;
-        padding: 20px;
-    }
-
     header nav img {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
+        border-radius: 60px;
+        margin: 60px 0;
     }
 
-    header nav .links-navegacion {
-        display: none;
+    main {
+
+        grid-template-areas:
+            "main-cabecera"
+            "main-cards"
+            "main-horarios";
     }
 
-    header nav .menu-hamburguesa{
-        display: block;
-        font-size: 1.8rem;
-    }
-
-    header nav #menu-toggle:checked + .menu-hamburguesa + .links-navegacion {
-    display: flex;
-    }
-    
     main .contenedor-info {
-        margin: 100px 0 25px 0;    
+        margin: 100px 0 25px 0;
     }
 
     main .contenedor-info h2 {
         font-size: 2rem;
     }
 
-    main .cointenedor-info p{
+    main .cointenedor-info p {
         margin: 0 auto;
         padding: 0 auto;
         text-align: center;
@@ -345,8 +369,12 @@ main aside ul li a:hover::before{
     main .contenedor-info .boton-info {
         font-size: 1rem;
     }
-    
-    main select {
+
+    main .contenedor-cards .cards .card img{
+        width: 60%;
+    }
+
+    main section {
         width: 100%;
     }
 
@@ -354,11 +382,19 @@ main aside ul li a:hover::before{
         display: none;
     }
 
-    footer .contenedor-iconos i{
+    main .contenedor-horarios table#horizontal {
+        display: none;
+    }
+
+    main .contenedor-horarios table#vertical {
+        display: inline;
+    }
+
+    footer .contenedor-iconos i {
         font-size: 2rem;
     }
 
-    footer .contenedor-copy{
+    footer .contenedor-copy {
         font-size: 0.5rem;
     }
 }

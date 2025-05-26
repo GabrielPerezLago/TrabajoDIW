@@ -164,11 +164,13 @@ main section article p:hover{
     }
 
     main section article p{
-        padding: 10px;
-        font-size: 1.02rem;
+        margin: 15px 2px;
+        padding: 5px;
+        font-size: 1rem;
     }
 
     main section article p:first-of-type{
-        margin-left: -5px;
+        text-align: center;
+        margin-left: -15px;
     }
 }

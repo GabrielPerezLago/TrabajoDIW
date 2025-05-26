@@ -125,3 +125,50 @@ main section form input#submit {
 main section form input#submit:hover{
     transform: scale(1.1);
 }
+
+@media (max-width: 800px){
+
+    main section {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    header nav {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    header nav img {
+        width: 40px;
+        height: 40px;
+    }
+
+    header nav .links-navegacion {
+        align-items: end;
+    }
+
+     header nav .links-navegacion a {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    main section {
+        width: 95%;
+    }
+
+    main section h2 {
+        font-size: 1.8rem;
+    }
+
+    main section form input#submit {
+        width: 50%;
+
+    }
+
+    main section form input, select{
+        width: 90%;
+    }
+}
