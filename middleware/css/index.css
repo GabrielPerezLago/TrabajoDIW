@@ -1,93 +1,3 @@
-:root {
-    --primary-color: #1e90ff;
-    --primary-color-2: #011f67;
-    --secondary-color: #fffdfd;
-    --contrast-color: black;
-    --contrast-secondary-color: rgba(128, 128, 128, 0.566);
-    --hover-primary-color: #011f67;
-    --hover-secondary-color: #1e90ff;
-    --hover-table-color: rgba(128, 128, 128, 0.12);
-    --nav-background: rgba(0, 0, 0, 0.5);
-    --nav--secondary--background: rgb(0, 0, 0);
-    --background-aside: rgba(146, 138, 138, 0.086);
-    --border-color: rgb(171, 164, 164);
-    --border-secondary-color: #012067a0;
-    --shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    --titulo-principal-font: 'Playfair Displa', serif;
-    --text-font: 'Roboto', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*::selection {
-    color: var(--primary-color);
-}
-
-* h1, h2, h3 {
-    font-family: var(--titulo-principal-font);
-}
-
-* p , a{
-    font-family: var(--text-font);
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    line-height: 1.5;
-}
-
-header {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url(../img/taller.jpg);
-    min-height: 800px;
-}
-
-header nav {
-    display: flex;
-    background-color: transparent;
-    justify-content: space-between;
-    padding: 30px;
-}
-
-header nav img {
-    border-radius: 50px;
-    width: 80px;
-    height: 80px;
-}
-
-header nav .links-navegacion a {
-    display: inline-block;
-    margin: 5px;
-    text-decoration: none;
-    color: var(--contrast-color);
-    font-size: 1.5rem;
-    transition: transform 0.5s ease;
-}
-
-header nav .links-navegacion a:hover {
-    transform: scale(1.05);
-    color: var(--hover-secondary-color);
-}
-
-header .cabecera h1 {
-    color: var(--secondary-color);
-    text-align: center;
-    font-family: var(--titulo-principal-font);
-    font-size: 20rem;
-}
-
-header .cabecera h2 {
-    text-align: center;
-    color: var(--secondary-color);
-}
 
 main {
     grid-area: main;
@@ -96,19 +6,18 @@ main {
         "main-cabecera main-cabecera main-cabecera"
         "main-cards main-cards aside"
         "main-horarios main-horarios main-horarios";
+    margin: 0 20px;
 }
-
-/* main section {
-    box-shadow: 5px 5px 10px var(--shadow-color);
-    border-radius: 20px;
-} */
 
 main .contenedor-info {
     grid-area: main-cabecera;
     font-family: var(--titulos-font);
     text-align: center;
-    margin: 150px 50px 50px 50px;
+    margin: 40px auto;
+    padding: 100px;
     min-height: 450px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
 }
 
 main .contenedor-info h2 {
@@ -118,8 +27,8 @@ main .contenedor-info h2 {
 }
 
 main .contenedor-info .texto-info {
-    margin: 40px 40px;
-    padding: 20px 20px;
+    margin: 30px;
+    padding: 20px;
     font-size: 1.2rem;
 }
 
@@ -144,16 +53,18 @@ main img {
 main .contenedor-cards {
     grid-area: main-cards;
     text-align: center;
-    margin: 30px 10px;
     max-width: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    margin-right: 20px;
 }
 
 main .contenedor-cards h2 {
     width: 100%;
     margin: 10px 0 60px 0;
+    padding-top: 40px;
     font-size: 2rem;
     color: var(--primary-color-2);
-    font-family: 'Mea Culpa', cursive;
 }
 
 main .contenedor-cards .cards {
@@ -161,6 +72,7 @@ main .contenedor-cards .cards {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 30px;
 }
 
 main .contenedor-cards .cards .card {
@@ -215,9 +127,8 @@ main .contenedor-horarios h2 {
     margin: 10px;
 }
 
-
 main .contenedor-horarios table {
-    margin: 50px 0;
+    margin: 20px 0;
     width: 100%;
     height: 150px;
     border-collapse: collapse;
@@ -245,19 +156,18 @@ main .contenedor-horarios table#vertical {
 
 main aside {
     grid-area: aside;
-    width: 90%;
+    width:100%;
     height: 100%;
-    float: right;
     background-color: var(--background-aside);
+    box-shadow: var(--shadow);
     border-radius: 20px;
     text-align: center;
-
 }
 
 main aside ul {
     list-style: none;
     text-align: left;
-    padding: 10px;
+    padding: 20px;
 }
 
 main aside h4 {
@@ -288,63 +198,9 @@ main aside ul li a:hover::before {
     content: "> ";
 }
 
-
-@media screen and (max-width: 800px) {
-
-    header {
-        max-height: 600px;
-    }
-
-    header nav {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    header nav img {
-        width: 100px;
-        height: 100px;
-    }
-
-    header h1 {
-        font-size: 12rem;
-    }
-
-    header .cabecera h2 {
-        font-size: 2rem;
-    }
-
-}
-
-
 @media (max-width: 450px) {
-
-    body {
-        line-height: auto;
-    }
-
-    header {
-        height: 100px;
-    }
-
-    header .cabecera h1 {
-        font-size: 7rem;
-    }
-
-    header .cabecera h2 {
-        font-size: 1rem;
-    }
-
-    header nav img {
-        width: 100px;
-        height: 100px;
-        border-radius: 60px;
-        margin: 60px 0;
-    }
-
     main {
-
+        margin: 0 5px;
         grid-template-areas:
             "main-cabecera"
             "main-cards"
@@ -352,18 +208,19 @@ main aside ul li a:hover::before {
     }
 
     main .contenedor-info {
-        margin: 100px 0 25px 0;
+        margin: 10px 0 25px 0;
+        padding: 0;
     }
 
     main .contenedor-info h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     main .cointenedor-info p {
         margin: 0 auto;
         padding: 0 auto;
         text-align: center;
-        font-size: xx-small;
+        font-size: 0.5rem;
     }
 
     main .contenedor-info .boton-info {
@@ -388,13 +245,5 @@ main aside ul li a:hover::before {
 
     main .contenedor-horarios table#vertical {
         display: inline;
-    }
-
-    footer .contenedor-iconos i {
-        font-size: 2rem;
-    }
-
-    footer .contenedor-copy {
-        font-size: 0.5rem;
     }
 }

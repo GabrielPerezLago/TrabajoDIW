@@ -1,66 +1,3 @@
-:root {
-    --primary-color: #1e90ff;
-    --primary-color-2: #011f67;
-    --secondary-color: #fffdfd;
-    --contrast-color: black;
-    --contrast-secondary-color: rgba(128, 128, 128, 0.566);
-    --hover-primary-color: #011f67;
-    --hover-secondary-color: #1e90ff;
-    --nav-background: rgba(0, 0, 0, 0.5);
-    --nav--secondary--background: rgb(0, 0, 0);
-    --background-aside: rgba(146, 138, 138, 0.086);
-    --border-color: rgb(171, 164, 164);
-    --border-secondary-color: #012067a0;
-    --shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    --titulo-principal-font: 'Playfair Displa', serif;
-    --text-font: 'Roboto', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*::selection {
-    color: var(--primary-color);
-}
-
-body {
-    background-color: var(--secondary-color);
-    font-family: var(--text-font);
-}
-
-
-header nav {
-    display: flex;
-    background-color: transparent;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--contrast-secondary-color);
-}
-
-header nav img {
-    border-radius: 50px;
-    width: 65px;
-    height: 65px;
-}
-
-
-header nav .links-navegacion a {
-    display: inline-block;
-    margin: 10px;
-    text-decoration: none;
-    color: var(--primary-color-2);
-    font-size: 1.3rem;
-    transition: transform 0.5s ease;
-}
-
-header nav .links-navegacion a:hover {
-    transform: scale(1.05);
-    color: var(--hover-secondary-color);
-}
 
 main section {
     width: 50%;
@@ -92,7 +29,7 @@ main section form {
 
 main section form label {
     color: var(--primary-color-2);
-    font-size: 1.15rem;
+    font-size: 1rem;
 }
 
 main section form input, select {
@@ -101,7 +38,11 @@ main section form input, select {
     margin: 10px auto;
     padding: 5px;
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: 10px;
+}
+
+main section form input, select{
+    border: 1px solid var(--border-secondary-color);
 }
 
 main section form input:hover,
@@ -109,13 +50,18 @@ select:hover {
     box-shadow: var(--shadow);
 }
 
+main section form input:focus{
+    outline: none;
+}
+
 main section form select {
     width: 50%;
 }
 
 main section form input#submit {
+    font-size: 1rem;
     width: 20%;
-    border-radius: 30px;
+    border-radius: 50px;
     margin: 30px auto;
     background-color: var(--primary-color-2);
     color: var(--secondary-color);
@@ -135,25 +81,6 @@ main section form input#submit:hover{
 
 
 @media (max-width: 450px) {
-
-    header nav {
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    header nav img {
-        width: 40px;
-        height: 40px;
-    }
-
-    header nav .links-navegacion {
-        align-items: end;
-    }
-
-     header nav .links-navegacion a {
-        font-size: 1rem;
-        margin: 5px;
-    }
 
     main section {
         width: 95%;

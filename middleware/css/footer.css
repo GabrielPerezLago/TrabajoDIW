@@ -29,3 +29,13 @@ footer .contenedor-iconos i:hover {
 footer p {
     padding: 10px;
 }
+
+@media screen and (max-width:450px) {
+    footer .contenedor-iconos i {
+        font-size: 2rem;
+    }
+
+    footer .contenedor-copy {
+        font-size: 0.5rem;
+    }
+}
