@@ -1,21 +1,3 @@
-:root {
-    --primary-color: #1e90ff;
-    --primary-color-2: #011f67;
-    --secondary-color: #fffdfd;
-    --contrast-color: black;
-    --contrast-secondary-color: rgba(128, 128, 128, 0.566);
-    --hover-primary-color: #011f67;
-    --hover-secondary-color: #1e90ff;
-    --nav-background: rgba(0, 0, 0, 0.5);
-    --nav--secondary--background: rgb(0, 0, 0);
-    --background-aside: rgba(146, 138, 138, 0.086);
-    --border-color: rgb(171, 164, 164);
-    --border-secondary-color: #012067a0;
-    --shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    --titulo-principal-font: 'Playfair Displa', serif;
-    --text-font: 'Roboto', sans-serif;
-}
-
 
 main {
     margin: 10px;
@@ -36,7 +18,7 @@ main section article h2 {
     margin: 10px;
     padding: 20px;
     text-align: center;
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-size: 2rem;
     font-family: var(--titulo-principal-font);
 }
@@ -94,7 +76,7 @@ main section .valores ul li {
 }
 
 main section .valores ul li strong {
-    color: var(--primary-color-2);
+    color: var(--primary-color);
 }
 
 @media screen and (max-width: 800px) {

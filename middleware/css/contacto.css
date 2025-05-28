@@ -14,7 +14,7 @@ main section article h2 {
     padding: 50px 0;
     font-size: 2rem;
     text-align: center;
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-family: var(--titulo-principal-font);
 }
 
@@ -26,7 +26,7 @@ main section article p{
     transition: transform 0.5s ease;
 
     i{
-        color: var(--primary-color-2);
+        color: var(--primary-color);
     }
 }
 

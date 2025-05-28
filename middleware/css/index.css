@@ -21,7 +21,7 @@ main .contenedor-info {
 }
 
 main .contenedor-info h2 {
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-size: 3rem;
     margin: 40px 0;
 }
@@ -36,7 +36,7 @@ main .contenedor-info .boton-info {
     display: inline-block;
     margin: 10px;
     text-decoration: none;
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     transition: transform 0.2s ease;
 }
 
@@ -64,7 +64,7 @@ main .contenedor-cards h2 {
     margin: 10px 0 60px 0;
     padding-top: 40px;
     font-size: 2rem;
-    color: var(--primary-color-2);
+    color: var(--primary-color);
 }
 
 main .contenedor-cards .cards {
@@ -91,7 +91,7 @@ main .contenedor-cards .cards .card:hover {
 
 main .contenedor-cards .cards .card h3 {
     margin: 10px;
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-size: 1.5rem;
     font-family: var(--titulos-font);
 
@@ -102,7 +102,7 @@ main .contenedor-cards .cards .card p {
 }
 
 main .contenedor-cards .cards .card a {
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -122,7 +122,7 @@ main .contenedor-horarios {
 main .contenedor-horarios h2 {
     font-size: 2rem;
     font-family: var(--titulo-principal-font);
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-family: var(--titulos-font);
     margin: 10px;
 }
@@ -171,19 +171,19 @@ main aside ul {
 }
 
 main aside h4 {
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-family: var(--titulos-font);
     margin: 20px 10px;
 }
 
 main aside ul h5 {
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-size: 0.9rem;
 }
 
 main aside ul li a {
     display: block;
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 0.8rem;
     padding: 2px;

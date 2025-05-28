@@ -32,8 +32,9 @@ main section form label {
     font-size: 1rem;
 }
 
-main section form input, select {
+main section form input, select, textarea {
     width: 70%;
+    max-width: 100%;
     height: 2rem;
     margin: 10px auto;
     padding: 5px;
@@ -41,7 +42,7 @@ main section form input, select {
     border-radius: 10px;
 }
 
-main section form input, select{
+main section form input, select, textarea{
     border: 1px solid var(--border-secondary-color);
 }
 

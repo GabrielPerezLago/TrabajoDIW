@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #1e90ff;
-    --primary-color-2: #011f67;
+    --primary-color: #011f67;
+    --primary-color-2: #1e90ff;
     --secondary-color: #fffdfd;
-    --contrast-color: black;
+    --contrast-color: #000000;
+    --contrast-color-2: #7b7b7b;
     --contrast-secondary-color: rgba(128, 128, 128, 0.566);
-    --hover-primary-color: #011f67;
-    --hover-secondary-color: #1e90ff;
+    --hover-primary-color: #1e90ff;
     --hover-table-color: rgba(128, 128, 128, 0.12);
     --nav-background: rgba(93, 92, 92, 0.218);
     --nav-background-secondary: rgba(93, 92, 92, 0.011);
@@ -98,7 +98,7 @@ header nav .links-navegacion a {
 
 header nav .links-navegacion a:hover {
     transform: scale(1.05);
-    color: var(--hover-secondary-color);
+    color: var(--hover-primary-color);
 }
 
 header h1 {
