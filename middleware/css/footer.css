@@ -1,7 +1,7 @@
 footer {
     grid-area: footer;
     margin-top: 10px ;
-    background-color: var(--primary-color-2);
+    background-color: var(--primary-color);
     text-align: center;
     color: var(--secondary-color);
 }

@@ -10,7 +10,7 @@ main section {
 main section h2 {
     margin: 40px 10px;
     text-align: center;
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-size: 2rem;
     font-family: var(--titulo-principal-font);
 }
@@ -28,7 +28,7 @@ main section form {
 }
 
 main section form label {
-    color: var(--primary-color-2);
+    color: var(--primary-color);
     font-size: 1rem;
 }
 
@@ -64,7 +64,7 @@ main section form input#submit {
     width: 20%;
     border-radius: 50px;
     margin: 30px auto;
-    background-color: var(--primary-color-2);
+    background-color: var(--primary-color);
     color: var(--secondary-color);
     transition: transform 0.2s ease;
 }
